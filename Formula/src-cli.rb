@@ -7,11 +7,11 @@ class SrcCli < Formula
 
   if OS.mac?
     url "https://github.com/sourcegraph/src-cli/releases/download/3.10.11/src-cli_3.10.11_darwin_amd64.tar.gz"
-    sha256 "c4e3677ac63e626be93c43639ca56c31b6a39097bef717ef1a2d9cc05b451401"
+    sha256 "69dd294cbd83b424e620bc975ee2c57a3c45d8b2ca4ea9ac00901524e5179e22"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/sourcegraph/src-cli/releases/download/3.10.11/src-cli_3.10.11_linux_amd64.tar.gz"
-      sha256 "12ec1890792eb41f0ef4cbb68fae9ddc5faf686520e9707e44c58b69c1251b19"
+      sha256 "34bc3057d751891fd84f77578f2798088806731b97f5b84af20516c0698e8cab"
     end
   end
 
