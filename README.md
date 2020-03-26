@@ -1,6 +1,6 @@
 This is a Homebrew tap repository that provides the `src-cli` formula for the Sourcegraph [`src` CLI](https://github.com/sourcegraph/src-cli)
 
-## Install for macOS
+## Install for macOS or Linux
 
 ### Homebrew
 
