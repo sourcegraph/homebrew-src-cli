@@ -2,17 +2,16 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "3.22.0"
+  version "3.22.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sourcegraph/src-cli/releases/download/3.22.0/src-cli_3.22.0_darwin_amd64.tar.gz"
-    sha256 "6e8874e96fff15364f4aaf68ff2a3e21962636805c1f657bbd9c99c2a627021a"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.22.0/src-cli_3.22.0_linux_amd64.tar.gz"
-      sha256 "2ee57187f2ba2dd0cd3bc417a342ab43122316db2ede4c92851349c496a6ba33"
-    end
+    url "https://github.com/sourcegraph/src-cli/releases/download/3.22.1/src-cli_3.22.1_darwin_amd64.tar.gz"
+    sha256 "56b2f495a8af9399268fb2b4c8bfade04620931f663218b943c92e4e27510c65"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/sourcegraph/src-cli/releases/download/3.22.1/src-cli_3.22.1_linux_amd64.tar.gz"
+    sha256 "0064adcdca9c3a39c45e100434ef647971eec8ebf31b9ab627dfadeb0f82d0e3"
   end
 
   def install
