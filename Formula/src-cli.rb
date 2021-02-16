@@ -18,6 +18,6 @@ class SrcCli < Formula
   end
 
   def install
-    bin.install "src-cli"
+    bin.install "src"
   end
 end
