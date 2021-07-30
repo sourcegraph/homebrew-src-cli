@@ -5,20 +5,20 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "3.30.2"
+  version "3.30.3"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.30.2/src-cli_3.30.2_darwin_amd64.tar.gz"
-      sha256 "496ecd1218c037d829cef2c60ddc35a1e18297e8aa8492908ecccb0052a2ec36"
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.30.3/src-cli_3.30.3_darwin_amd64.tar.gz"
+      sha256 "bc7fe565b7f568021800341ee08375166beb10975ec870a620e4ca742b0eebf1"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.30.2/src-cli_3.30.2_linux_amd64.tar.gz"
-      sha256 "ba0a96c668c8a3dfd7859cd342b50654df94ff7132b1e4e149b260a4c6ea4a39"
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.30.3/src-cli_3.30.3_linux_amd64.tar.gz"
+      sha256 "b15f97b7d72373cc8547e7f5d39df5fbc351e8b646f5ec6d56048006d5986e63"
     end
   end
 
