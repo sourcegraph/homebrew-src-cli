@@ -5,28 +5,28 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "3.30.4"
+  version "3.30.5"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.30.4/src-cli_3.30.4_darwin_amd64.tar.gz"
-      sha256 "8500d85e32835aa3aa6dcc47312e4e0f46db69b04a43b3630ac31686a20d3b94"
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.30.5/src-cli_3.30.5_darwin_amd64.tar.gz"
+      sha256 "bcb5cc977249d992bc1931c829585206b7baed84215583328cb36f396ec06e24"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.30.4/src-cli_3.30.4_darwin_arm64.tar.gz"
-      sha256 "8ca6086351a6f55da7821719e6d5ca4e28c42201e50f1b41fd35eb1fd34a4d9e"
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.30.5/src-cli_3.30.5_darwin_arm64.tar.gz"
+      sha256 "631f7250c0fa7409cb7c9346c41b8bb50a754f1847a7bd4410ead14f6519f0e1"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.30.4/src-cli_3.30.4_linux_amd64.tar.gz"
-      sha256 "acfdf65fbcb0f8fac531a001c17e662ac15851dfd87392331426623a65bb06d6"
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.30.5/src-cli_3.30.5_linux_amd64.tar.gz"
+      sha256 "e5b7b80e8f4464e209605f84baffb777db0045506b1234d80ff64586e4d2d31d"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.30.4/src-cli_3.30.4_linux_arm64.tar.gz"
-      sha256 "397e46f20d85c71a1dc8873520573b6b83049bca7c463167672f4bb88a444840"
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.30.5/src-cli_3.30.5_linux_arm64.tar.gz"
+      sha256 "281bc467d2e05297b8e419cfc215d48410a689cd119cdab96318ab0025443cbe"
     end
   end
 
