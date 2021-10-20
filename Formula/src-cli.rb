@@ -6,7 +6,6 @@ class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
   version "3.33.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
