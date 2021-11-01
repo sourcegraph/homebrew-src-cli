@@ -5,32 +5,43 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "3.33.4"
-  bottle :unneeded
+  version "3.33.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.33.4/src-cli_3.33.4_darwin_amd64.tar.gz"
-      sha256 "49e2f0125db413b13da8fc54d6f31372b53f63a1e92874d77a6d55329dfbace8"
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.33.5/src-cli_3.33.5_darwin_amd64.tar.gz"
+      sha256 "68c5ab83d9d0d7fc6a1e39813b7bf02a0a9dfba78a54d312ce22e994420ccc8c"
+
+      def install
+        bin.install "src"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.33.4/src-cli_3.33.4_darwin_arm64.tar.gz"
-      sha256 "61b379555e2506e352028425230bc0af8d30f0092a82a03a84a461b27afc7c5c"
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.33.5/src-cli_3.33.5_darwin_arm64.tar.gz"
+      sha256 "b1cd9b3806d46ef2e27972e3d52d1b7d80e7f4e61bbc01e71190635a0d1da7d3"
+
+      def install
+        bin.install "src"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.33.4/src-cli_3.33.4_linux_arm64.tar.gz"
-      sha256 "c44a1b8ea0e5bd9d3fe4a7a37ee4d83935c0aa10e4af3aea9b91fb9c0788038d"
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.33.5/src-cli_3.33.5_linux_arm64.tar.gz"
+      sha256 "5d623f8393124a169db4478dca827179cc0f45bac0deaf4b3c65664c9a4147ec"
+
+      def install
+        bin.install "src"
+      end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.33.4/src-cli_3.33.4_linux_amd64.tar.gz"
-      sha256 "dd32f00824eac9a5d505c0c99a7f60513c2e0875063f11a6b69f72216641dd14"
-    end
-  end
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.33.5/src-cli_3.33.5_linux_amd64.tar.gz"
+      sha256 "8d117e28b21dc2019bf32348d711f067a426d17cf36f0cbf02438e77d0f0009a"
 
-  def install
-    bin.install "src"
+      def install
+        bin.install "src"
+      end
+    end
   end
 end
