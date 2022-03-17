@@ -5,20 +5,20 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "3.37.0"
+  version "3.38.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.37.0/src-cli_3.37.0_darwin_amd64.tar.gz"
-      sha256 "ffb6070a08908008795f689e57536b3afb553161c70fb804352e3ecaccf1c1d4"
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.38.0/src-cli_3.38.0_darwin_amd64.tar.gz"
+      sha256 "d5e91c40659af48edd1e40d5a751936da060dfa06c18b1d272049325d6856136"
 
       def install
         bin.install "src"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.37.0/src-cli_3.37.0_darwin_arm64.tar.gz"
-      sha256 "e6d99aa95b50fd94d949d5794470288bbe67a433de424a2b7163a546a0b78bb6"
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.38.0/src-cli_3.38.0_darwin_arm64.tar.gz"
+      sha256 "aa3e18b962870a909e185d8f08726a9b7beddc120a4428cd8a53d7a1fe7e8454"
 
       def install
         bin.install "src"
@@ -27,17 +27,17 @@ class SrcCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.37.0/src-cli_3.37.0_linux_arm64.tar.gz"
-      sha256 "179349778dd6cdf63c137ef05f97a3d3aaaf62f6b671eac19103f8bb7a854918"
+    if Hardware::CPU.intel?
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.38.0/src-cli_3.38.0_linux_amd64.tar.gz"
+      sha256 "faa9899d4c405ca2842f7df4737b67ab530b1b5e4276b05a922ca1636f2b196a"
 
       def install
         bin.install "src"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.37.0/src-cli_3.37.0_linux_amd64.tar.gz"
-      sha256 "eb1e8880b3a6c3dbbdb4514249947fb4ed7969b530113b6b782644ffb99ab6df"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.38.0/src-cli_3.38.0_linux_arm64.tar.gz"
+      sha256 "ec81081654ccece0ddc77b335e5e524fbb0d93ee98f22850fca0b670de406127"
 
       def install
         bin.install "src"
