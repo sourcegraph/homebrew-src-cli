@@ -5,20 +5,20 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "3.40.2"
+  version "3.40.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.40.2/src-cli_3.40.2_darwin_arm64.tar.gz"
-      sha256 "472640b9cdeef53bb3676b6066027318a80f9694582600b66f2746e2a08f4d94"
+    if Hardware::CPU.intel?
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.40.3/src-cli_3.40.3_darwin_amd64.tar.gz"
+      sha256 "db690cd723b02725fb133dd761b7db8f14eb16c4bbd00306c26ef865cff6bcb8"
 
       def install
         bin.install "src"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.40.2/src-cli_3.40.2_darwin_amd64.tar.gz"
-      sha256 "8ae265e94f9f2f8b45a191baa5b3a7da0a5303824d3b03f107c8ce43428a8006"
+    if Hardware::CPU.arm?
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.40.3/src-cli_3.40.3_darwin_arm64.tar.gz"
+      sha256 "1e61bfc9044cb01453d93dbe5b2dc5efdf6095d30b17dd67fa5c8e711e46fce3"
 
       def install
         bin.install "src"
@@ -27,17 +27,17 @@ class SrcCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.40.2/src-cli_3.40.2_linux_amd64.tar.gz"
-      sha256 "4c6d48c5fef56882d51e8570ff72dade296135baccf01529441f4508b6e4b1d9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.40.3/src-cli_3.40.3_linux_arm64.tar.gz"
+      sha256 "f79784aa5f8ba34b5925ed36435a18ab610a31a957cb3158a7c8b468a6f82a31"
 
       def install
         bin.install "src"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sourcegraph/src-cli/releases/download/3.40.2/src-cli_3.40.2_linux_arm64.tar.gz"
-      sha256 "a1a4ba41de9a1f4c6cd23de11b5c54d7f5060648110164da5e58bbbb85360861"
+    if Hardware::CPU.intel?
+      url "https://github.com/sourcegraph/src-cli/releases/download/3.40.3/src-cli_3.40.3_linux_amd64.tar.gz"
+      sha256 "bb0a319337c2b81240df6884ab4f604634dfa358ae5b1bd791d2be265cd4c686"
 
       def install
         bin.install "src"
