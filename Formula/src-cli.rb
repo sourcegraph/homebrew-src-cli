@@ -5,20 +5,20 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "4.0.1"
+  version "4.0.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sourcegraph/src-cli/releases/download/4.0.1/src-cli_4.0.1_darwin_arm64.tar.gz"
-      sha256 "8c4b039ce5bd99a7604c99b75c2ab0911fda4bba75d7a04e7190bcce7cbe5a1d"
+    if Hardware::CPU.intel?
+      url "https://github.com/sourcegraph/src-cli/releases/download/4.0.2/src-cli_4.0.2_darwin_amd64.tar.gz"
+      sha256 "4ed13c8d931e70e4edbcfb141b3755334132ed1afcf3dc344819f602b8a841f1"
 
       def install
         bin.install "src"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/4.0.1/src-cli_4.0.1_darwin_amd64.tar.gz"
-      sha256 "4749b527e76f4e001ef87ec11fec1f982a393f0b2444d917f69ec77a008eee2e"
+    if Hardware::CPU.arm?
+      url "https://github.com/sourcegraph/src-cli/releases/download/4.0.2/src-cli_4.0.2_darwin_arm64.tar.gz"
+      sha256 "18522c48ad86e0e99493834748b61fb21cff435740fdd0374bc25b737e3a4f29"
 
       def install
         bin.install "src"
@@ -28,16 +28,16 @@ class SrcCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sourcegraph/src-cli/releases/download/4.0.1/src-cli_4.0.1_linux_arm64.tar.gz"
-      sha256 "d4bc1201f3ddfb876286f9c8df2f48d0e4a41b60f7c791a0247435d818991604"
+      url "https://github.com/sourcegraph/src-cli/releases/download/4.0.2/src-cli_4.0.2_linux_arm64.tar.gz"
+      sha256 "773677715b3e8b3ae0970730bfccd5839a396272b2c3083aaf445c67427b239d"
 
       def install
         bin.install "src"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/4.0.1/src-cli_4.0.1_linux_amd64.tar.gz"
-      sha256 "f16af46b5669de4b51df21c9972d2187efff1afcb6e38ef01161712b561ff9cf"
+      url "https://github.com/sourcegraph/src-cli/releases/download/4.0.2/src-cli_4.0.2_linux_amd64.tar.gz"
+      sha256 "68c34e5195c03d0166400768fb6a0597e128e835d153a021146629b79e5aff1f"
 
       def install
         bin.install "src"
