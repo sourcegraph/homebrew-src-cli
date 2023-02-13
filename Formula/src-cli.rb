@@ -5,20 +5,20 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "4.4.1"
+  version "4.4.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sourcegraph/src-cli/releases/download/4.4.1/src-cli_4.4.1_darwin_arm64.tar.gz"
-      sha256 "099eda183941098de5d78fa92515e7c2307aecd5a70416326beaae5ab12399ed"
+      url "https://github.com/sourcegraph/src-cli/releases/download/4.4.2/src-cli_4.4.2_darwin_arm64.tar.gz"
+      sha256 "59239340a508b67abfe6d282eba08c8ed9b2f968ca794068b822b0b73898fba1"
 
       def install
         bin.install "src"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/4.4.1/src-cli_4.4.1_darwin_amd64.tar.gz"
-      sha256 "0f2afdafe031c982e225f55acd5b25fcd9a7d70e9774d387d79dbb514e76809b"
+      url "https://github.com/sourcegraph/src-cli/releases/download/4.4.2/src-cli_4.4.2_darwin_amd64.tar.gz"
+      sha256 "642e11193564e61d35c244d67e46a9c61807e51a5ef260113c668a8f2a4b8c6b"
 
       def install
         bin.install "src"
@@ -28,16 +28,16 @@ class SrcCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sourcegraph/src-cli/releases/download/4.4.1/src-cli_4.4.1_linux_arm64.tar.gz"
-      sha256 "3d77cce4963a6f817f56d58c0fbdb0c1d8b2df1eb0fb52d7a200127ccb4acccf"
+      url "https://github.com/sourcegraph/src-cli/releases/download/4.4.2/src-cli_4.4.2_linux_arm64.tar.gz"
+      sha256 "0f13c4bfbeef8eccf5867731478daf8cc3e9f9ce93470412797b3aa44963a1c0"
 
       def install
         bin.install "src"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/4.4.1/src-cli_4.4.1_linux_amd64.tar.gz"
-      sha256 "b9b823b429581cd70ab5833384085dd8ef6d8d10c61c8cd319e7983eb3ede979"
+      url "https://github.com/sourcegraph/src-cli/releases/download/4.4.2/src-cli_4.4.2_linux_amd64.tar.gz"
+      sha256 "231624949feb87c37379d4305a224cbcabc0f7d350a966523c8ad720adeb782a"
 
       def install
         bin.install "src"
