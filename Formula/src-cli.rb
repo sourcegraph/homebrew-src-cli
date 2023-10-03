@@ -5,20 +5,20 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "5.1.0"
+  version "5.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/5.1.0/src-cli_5.1.0_darwin_amd64.tar.gz"
-      sha256 "f14414e3ff4759cd1fbed0107138214f87d9a69cdb55ed1c4522704069420d9b"
+      url "https://github.com/sourcegraph/src-cli/releases/download/5.2.0/src-cli_5.2.0_darwin_amd64.tar.gz"
+      sha256 "d65914b94af09400dfa41aa2a83f956f8a11ec2957fdf09fe845b6e3cdb777f8"
 
       def install
         bin.install "src"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sourcegraph/src-cli/releases/download/5.1.0/src-cli_5.1.0_darwin_arm64.tar.gz"
-      sha256 "93dc6c8522792ea16e3c8c81c8cf655a908118e867fda43c048c9b51f4c70e88"
+      url "https://github.com/sourcegraph/src-cli/releases/download/5.2.0/src-cli_5.2.0_darwin_arm64.tar.gz"
+      sha256 "866758720a1bb077d21b96fe48841d32d9bf11511cd79d9b1e84ccab3dcdde64"
 
       def install
         bin.install "src"
@@ -27,17 +27,17 @@ class SrcCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sourcegraph/src-cli/releases/download/5.1.0/src-cli_5.1.0_linux_arm64.tar.gz"
-      sha256 "8211ed26069269ba989167a9a3a450ffa19516eec372906198cd076b34cc1c5a"
+    if Hardware::CPU.intel?
+      url "https://github.com/sourcegraph/src-cli/releases/download/5.2.0/src-cli_5.2.0_linux_amd64.tar.gz"
+      sha256 "40fdb8179c4d6e4d150811dd66610f212b5f4fe6aee4c22ece53665c070b0ac3"
 
       def install
         bin.install "src"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/5.1.0/src-cli_5.1.0_linux_amd64.tar.gz"
-      sha256 "270ddad7748c1b76f082b637e336b5c7a58af76d207168469f4b7bef957953e3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sourcegraph/src-cli/releases/download/5.2.0/src-cli_5.2.0_linux_arm64.tar.gz"
+      sha256 "c20bf888cc9561f42a2224141c09b353ff0e5e112bbebc098b388c8022a9aa5f"
 
       def install
         bin.install "src"
