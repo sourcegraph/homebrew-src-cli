@@ -5,20 +5,20 @@
 class SrcCliAT512 < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "5.1.2"
+  version "5.1.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sourcegraph/src-cli/releases/download/5.1.2/src-cli_5.1.2_darwin_arm64.tar.gz"
-      sha256 "313af7120feca0b9d756679e44c06360269ef724dd70d2ff3ee30c56ee9a12c1"
+    if Hardware::CPU.intel?
+      url "https://github.com/sourcegraph/src-cli/releases/download/5.1.0/src-cli_5.1.0_darwin_amd64.tar.gz"
+      sha256 "f14414e3ff4759cd1fbed0107138214f87d9a69cdb55ed1c4522704069420d9b"
 
       def install
         bin.install "src"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/5.1.2/src-cli_5.1.2_darwin_amd64.tar.gz"
-      sha256 "2d010624f10e8101f92b17ee57a82648ed55eef4fd4aadff1133ae456e0abce2"
+    if Hardware::CPU.arm?
+      url "https://github.com/sourcegraph/src-cli/releases/download/5.1.0/src-cli_5.1.0_darwin_arm64.tar.gz"
+      sha256 "93dc6c8522792ea16e3c8c81c8cf655a908118e867fda43c048c9b51f4c70e88"
 
       def install
         bin.install "src"
@@ -28,16 +28,16 @@ class SrcCliAT512 < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sourcegraph/src-cli/releases/download/5.1.2/src-cli_5.1.2_linux_arm64.tar.gz"
-      sha256 "f01db0001162a611d506eef8a67a367b333eefdbb605ee2c0d2ec3243bd48af8"
+      url "https://github.com/sourcegraph/src-cli/releases/download/5.1.0/src-cli_5.1.0_linux_arm64.tar.gz"
+      sha256 "8211ed26069269ba989167a9a3a450ffa19516eec372906198cd076b34cc1c5a"
 
       def install
         bin.install "src"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/5.1.2/src-cli_5.1.2_linux_amd64.tar.gz"
-      sha256 "b0ab49597008943d8477039e5a8ef62cb8d25daceb9da9bae924a37b6addc5c2"
+      url "https://github.com/sourcegraph/src-cli/releases/download/5.1.0/src-cli_5.1.0_linux_amd64.tar.gz"
+      sha256 "270ddad7748c1b76f082b637e336b5c7a58af76d207168469f4b7bef957953e3"
 
       def install
         bin.install "src"
