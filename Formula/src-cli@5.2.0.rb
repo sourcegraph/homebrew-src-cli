@@ -8,17 +8,17 @@ class SrcCliAT520 < Formula
   version "5.2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sourcegraph/src-cli/releases/download/5.2.0/src-cli_5.2.0_darwin_arm64.tar.gz"
-      sha256 "69b2ef9de708e52696aa09541c4b134745f4bfee5180322bbf26858f57783e8c"
+    if Hardware::CPU.intel?
+      url "https://github.com/sourcegraph/src-cli/releases/download/5.2.0/src-cli_5.2.0_darwin_amd64.tar.gz"
+      sha256 "d65914b94af09400dfa41aa2a83f956f8a11ec2957fdf09fe845b6e3cdb777f8"
 
       def install
         bin.install "src"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sourcegraph/src-cli/releases/download/5.2.0/src-cli_5.2.0_darwin_amd64.tar.gz"
-      sha256 "57caaf76bb228fa9f8ea528123e59dffc5d88778dd26c9f8ba23ac834bb7f275"
+    if Hardware::CPU.arm?
+      url "https://github.com/sourcegraph/src-cli/releases/download/5.2.0/src-cli_5.2.0_darwin_arm64.tar.gz"
+      sha256 "866758720a1bb077d21b96fe48841d32d9bf11511cd79d9b1e84ccab3dcdde64"
 
       def install
         bin.install "src"
@@ -29,7 +29,7 @@ class SrcCliAT520 < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/sourcegraph/src-cli/releases/download/5.2.0/src-cli_5.2.0_linux_amd64.tar.gz"
-      sha256 "9da68c8fcb8c86733d7aeeaae1fdcda028b6ae2abc726d2b95dc7edbdb8aae4e"
+      sha256 "40fdb8179c4d6e4d150811dd66610f212b5f4fe6aee4c22ece53665c070b0ac3"
 
       def install
         bin.install "src"
@@ -37,7 +37,7 @@ class SrcCliAT520 < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/sourcegraph/src-cli/releases/download/5.2.0/src-cli_5.2.0_linux_arm64.tar.gz"
-      sha256 "4fd7c1059c290220ade23ab18296611061bcf3a2202830b4aa9e8c2338b6a7ef"
+      sha256 "c20bf888cc9561f42a2224141c09b353ff0e5e112bbebc098b388c8022a9aa5f"
 
       def install
         bin.install "src"
