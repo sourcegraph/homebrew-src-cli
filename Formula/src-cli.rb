@@ -5,20 +5,20 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "5.11.0"
+  version "5.11.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/sourcegraph/src-cli/releases/download/5.11.0/src-cli_5.11.0_darwin_amd64.tar.gz"
-      sha256 "518b1d9845c3b12a7b4cce22aae674df766938aabca4049cd5f44bb35585be19"
+      url "https://github.com/sourcegraph/src-cli/releases/download/5.11.1/src-cli_5.11.1_darwin_amd64.tar.gz"
+      sha256 "4047ae5d36ffef172d892a9200c9df9948728592dd57da86acb0817b9e568029"
 
       def install
         bin.install "src"
       end
     end
     on_arm do
-      url "https://github.com/sourcegraph/src-cli/releases/download/5.11.0/src-cli_5.11.0_darwin_arm64.tar.gz"
-      sha256 "defadd9d7bc46b28ac916f0d008194670343a5c1e93b87033f4ec0967cd862a6"
+      url "https://github.com/sourcegraph/src-cli/releases/download/5.11.1/src-cli_5.11.1_darwin_arm64.tar.gz"
+      sha256 "b7fad5303c77d9dbf4fcf0ac56401c40b26084f2f6bcac5ba4690f3cd17ca423"
 
       def install
         bin.install "src"
@@ -29,8 +29,8 @@ class SrcCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sourcegraph/src-cli/releases/download/5.11.0/src-cli_5.11.0_linux_amd64.tar.gz"
-        sha256 "10e99e5e456470b48d69c2309dd332b62f5fec101fc152112f6aadbb14fd1611"
+        url "https://github.com/sourcegraph/src-cli/releases/download/5.11.1/src-cli_5.11.1_linux_amd64.tar.gz"
+        sha256 "4b1fefa681a0a21eb38786b83d4d193b542a1826f15f64e957a9694e2ebf7ffd"
 
         def install
           bin.install "src"
@@ -39,8 +39,8 @@ class SrcCli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sourcegraph/src-cli/releases/download/5.11.0/src-cli_5.11.0_linux_arm64.tar.gz"
-        sha256 "78b931892ae5653674ce47066612bd45d32c1312cab8aa4f3e2c9233b7831104"
+        url "https://github.com/sourcegraph/src-cli/releases/download/5.11.1/src-cli_5.11.1_linux_arm64.tar.gz"
+        sha256 "5963d956a678bec71503f18d904940bea84a0fe22add4d1c44cc0d2f2ae6e5be"
 
         def install
           bin.install "src"
