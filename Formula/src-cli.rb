@@ -5,20 +5,20 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "6.0.1"
+  version "6.1.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/sourcegraph/src-cli/releases/download/6.0.1/src-cli_6.0.1_darwin_amd64.tar.gz"
-      sha256 "08108cb6f468347f290e05a8527a922db079a52fa77742306d66b01ec4abb8cf"
+      url "https://github.com/sourcegraph/src-cli/releases/download/6.1.0/src-cli_6.1.0_darwin_amd64.tar.gz"
+      sha256 "7ce52179ff4da13017bc562a4bed72fcfe66b8068a38fce2af6c48a406d81a3b"
 
       def install
         bin.install "src"
       end
     end
     on_arm do
-      url "https://github.com/sourcegraph/src-cli/releases/download/6.0.1/src-cli_6.0.1_darwin_arm64.tar.gz"
-      sha256 "7a925d68d876adc305af6efa28f9a9030486a36dc8d416d324c5668baab1779e"
+      url "https://github.com/sourcegraph/src-cli/releases/download/6.1.0/src-cli_6.1.0_darwin_arm64.tar.gz"
+      sha256 "f30f1c188fa9b430a0ec647f0871b05f285d392c77055f3176c35c3697e36629"
 
       def install
         bin.install "src"
@@ -29,8 +29,8 @@ class SrcCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sourcegraph/src-cli/releases/download/6.0.1/src-cli_6.0.1_linux_amd64.tar.gz"
-        sha256 "38e8a359f2e1b75ce03872f6b2881b2149965168aeb1949544dd50631742d434"
+        url "https://github.com/sourcegraph/src-cli/releases/download/6.1.0/src-cli_6.1.0_linux_amd64.tar.gz"
+        sha256 "a3257c5290587b74bcc8e0d9f5dfa4c2050e76f52ecc395e3493ec5101ca958e"
 
         def install
           bin.install "src"
@@ -39,8 +39,8 @@ class SrcCli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sourcegraph/src-cli/releases/download/6.0.1/src-cli_6.0.1_linux_arm64.tar.gz"
-        sha256 "a6ebcb8d3192d64f60657cc8b075618c4ef3ecef0fc0e0666cf8b1fdecece243"
+        url "https://github.com/sourcegraph/src-cli/releases/download/6.1.0/src-cli_6.1.0_linux_arm64.tar.gz"
+        sha256 "40ae78da26ae72da41363632899594e6b3922557bfb6e5234519a2a47f1d81b3"
 
         def install
           bin.install "src"
