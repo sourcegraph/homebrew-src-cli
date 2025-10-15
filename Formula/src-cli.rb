@@ -5,20 +5,20 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "6.7.1104"
+  version "6.9.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/sourcegraph/src-cli/releases/download/6.7.1104/src-cli_6.7.1104_darwin_amd64.tar.gz"
-      sha256 "dec0b1f6e85b166bd3b9dc58b8285cd04fafa473bfc447f44bced5e8ef41ede3"
+      url "https://github.com/sourcegraph/src-cli/releases/download/6.9.0/src-cli_6.9.0_darwin_amd64.tar.gz"
+      sha256 "37e4ecf37a479e85155137fe875168cbcf26cedf88b2cb03aba9496f1e8e3952"
 
       def install
         bin.install "src"
       end
     end
     on_arm do
-      url "https://github.com/sourcegraph/src-cli/releases/download/6.7.1104/src-cli_6.7.1104_darwin_arm64.tar.gz"
-      sha256 "0a80ae933b9b1e278a570e6bb30f633908dc0cb2607dd9ada499c2cc37860d96"
+      url "https://github.com/sourcegraph/src-cli/releases/download/6.9.0/src-cli_6.9.0_darwin_arm64.tar.gz"
+      sha256 "22f8ad2d84e8b86e62dd5b1b862db011d64bf9c97a7a571fd3875873d0ef75d1"
 
       def install
         bin.install "src"
@@ -29,8 +29,8 @@ class SrcCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sourcegraph/src-cli/releases/download/6.7.1104/src-cli_6.7.1104_linux_amd64.tar.gz"
-        sha256 "b52611b07f994e1261c96d2392ea452c20f4c696a57ace97859c7bf25daf4993"
+        url "https://github.com/sourcegraph/src-cli/releases/download/6.9.0/src-cli_6.9.0_linux_amd64.tar.gz"
+        sha256 "8e2e37daba5374405cda3d1c528680fb29b6fc69514ce60a87d7c01cf7561351"
 
         def install
           bin.install "src"
@@ -39,8 +39,8 @@ class SrcCli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sourcegraph/src-cli/releases/download/6.7.1104/src-cli_6.7.1104_linux_arm64.tar.gz"
-        sha256 "159d922819adf4012cdf8e511daecf67ee78b916ad5c0b53d87d7ab1a4e93ef6"
+        url "https://github.com/sourcegraph/src-cli/releases/download/6.9.0/src-cli_6.9.0_linux_arm64.tar.gz"
+        sha256 "ee9d732e11dbc7ff3a859feb975054a23988732714e4c7e9beee69f06ba66dba"
 
         def install
           bin.install "src"
