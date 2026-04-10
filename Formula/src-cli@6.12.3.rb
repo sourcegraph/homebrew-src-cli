@@ -10,7 +10,7 @@ class SrcCliAT6123 < Formula
   on_macos do
     on_intel do
       url "https://github.com/sourcegraph/src-cli/releases/download/6.12.3/src-cli_6.12.3_darwin_amd64.tar.gz"
-      sha256 "07c72203e074a6849905ced186e167f6ca4f9072390ea8507b8d85bb90d71915"
+      sha256 "3a6a1e0282dfb918ec513a0f6d09cced40f6c55103ac0f4c375cd595aede5580"
 
       def install
         bin.install "src"
@@ -18,7 +18,7 @@ class SrcCliAT6123 < Formula
     end
     on_arm do
       url "https://github.com/sourcegraph/src-cli/releases/download/6.12.3/src-cli_6.12.3_darwin_arm64.tar.gz"
-      sha256 "03bb3d6a5603804af397520bd798aa11825b8c84f41ebd2624e9c25b7fbd8507"
+      sha256 "15c8bbe2014cee0d7b88e05992760285a2e8c74d78879822088684793bb41694"
 
       def install
         bin.install "src"
@@ -30,7 +30,7 @@ class SrcCliAT6123 < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/sourcegraph/src-cli/releases/download/6.12.3/src-cli_6.12.3_linux_amd64.tar.gz"
-        sha256 "b9452fe3739325c7245dccba4d2893d6fa7db03aed2de1f813fa39f87daa8966"
+        sha256 "126a2ffdea9ea94c9f2e8fc784b5385466f4be86a05711a53d1384588678c7de"
 
         def install
           bin.install "src"
@@ -40,7 +40,7 @@ class SrcCliAT6123 < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/sourcegraph/src-cli/releases/download/6.12.3/src-cli_6.12.3_linux_arm64.tar.gz"
-        sha256 "9c4e01d9566dde8b16171cd33d2f6877b96a6373f48a6a151504b733de6cc208"
+        sha256 "1762841e37ad8d97f840b09597f23b2781b2e5c84478f912b605b4ba44af0c1c"
 
         def install
           bin.install "src"
