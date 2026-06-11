@@ -5,20 +5,20 @@
 class SrcCli < Formula
   desc "Sourcegraph CLI"
   homepage "https://sourcegraph.com/"
-  version "7.4.0-rc.0"
+  version "7.4.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/sourcegraph/src-cli/releases/download/7.4.0-rc.0/src-cli_7.4.0-rc.0_darwin_amd64.tar.gz"
-      sha256 "04dc278d4e6e1df0875ffdbf5d9cea400cacb372e2764733104b7a85ca061879"
+      url "https://github.com/sourcegraph/src-cli/releases/download/7.4.0/src-cli_7.4.0_darwin_amd64.tar.gz"
+      sha256 "f03d1e8c4cf878a9494dd01c82e78a40b05945c2530deb7d2bb66bfe865fb3a3"
 
       def install
         bin.install "src"
       end
     end
     on_arm do
-      url "https://github.com/sourcegraph/src-cli/releases/download/7.4.0-rc.0/src-cli_7.4.0-rc.0_darwin_arm64.tar.gz"
-      sha256 "bb3db4eb2b1c70c73b6a132e9b8f6be3d1ca5a7b59377262cb41ddb1b3fc6c27"
+      url "https://github.com/sourcegraph/src-cli/releases/download/7.4.0/src-cli_7.4.0_darwin_arm64.tar.gz"
+      sha256 "88c87113fb24a8bd8bfca84b6e2d8632b871dc784a6e2149706771f6eb2867ac"
 
       def install
         bin.install "src"
@@ -29,8 +29,8 @@ class SrcCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sourcegraph/src-cli/releases/download/7.4.0-rc.0/src-cli_7.4.0-rc.0_linux_amd64.tar.gz"
-        sha256 "243560cdd39e3c19cbc25acfaca2ab3bb33f65475d4fe2ba7c8ec99a4710ca44"
+        url "https://github.com/sourcegraph/src-cli/releases/download/7.4.0/src-cli_7.4.0_linux_amd64.tar.gz"
+        sha256 "5907e3ea9ba24afbca3d0aa267e8158af0fe05038e99f922940c32a90a273bc9"
 
         def install
           bin.install "src"
@@ -39,8 +39,8 @@ class SrcCli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sourcegraph/src-cli/releases/download/7.4.0-rc.0/src-cli_7.4.0-rc.0_linux_arm64.tar.gz"
-        sha256 "5ed10a6b5edf1c3852128d0ce2a001b74c6d210d5b96d69c0f104f58e6ad430c"
+        url "https://github.com/sourcegraph/src-cli/releases/download/7.4.0/src-cli_7.4.0_linux_arm64.tar.gz"
+        sha256 "2b2bcb3821d1ffefb63ab3e832d9c8484e2c3b9f3c86cfccc6bd3eb6c2e27b64"
 
         def install
           bin.install "src"
